@@ -16,7 +16,8 @@ export default class TodoForm extends Component {
           <input id='description' className='form-control' placeholder='Adicione uma tarefa' />
         </Grid>
         <Grid cols='12 3 2'>
-          <IconButton style='primary' icon='plus'></IconButton>
+          <IconButton style='primary' icon='plus' onClick={this.props.handleAdd}>
+          </IconButton>
         </Grid>
       </div>
     );
