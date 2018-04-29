@@ -7,6 +7,16 @@ import IconButton from '../template/iconButton'
 export default class TodoForm extends Component {
   constructor(props) {
     super(props)
+
+    this.keyHandler = this.keyHandler.bind(this);
+  }
+
+  keyHandler(e) {
+    if (e.key === 'Enter') {
+      e.shiftKey ? this.props.handleSearch() : this.props.handleAdd();
+    } else if (e.key === 'Escape') {
+      this.props.handleClear();
+    }
   }
 
   render() {
@@ -18,7 +28,9 @@ export default class TodoForm extends Component {
             className='form-control'
             placeholder='Adicione uma tarefa'
             value={this.props.description}
-            onChange={this.props.handleChange}/>
+            onChange={this.props.handleChange}
+            onKeyUp={this.keyHandler}  
+          />
         </Grid>
         <Grid cols='12 3 3'>
           <IconButton style='primary' icon='plus' onClick={this.props.handleAdd}></IconButton>
