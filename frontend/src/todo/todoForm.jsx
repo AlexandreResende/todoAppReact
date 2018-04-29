@@ -23,6 +23,7 @@ export default class TodoForm extends Component {
         <Grid cols='12 3 3'>
           <IconButton style='primary' icon='plus' onClick={this.props.handleAdd}></IconButton>
           <IconButton style='info' icon='search' onClick={this.props.handleSearch}></IconButton>
+          <IconButton style='default' icon='close' onClick={this.props.handleClear}></IconButton>
         </Grid>
       </div>
     );

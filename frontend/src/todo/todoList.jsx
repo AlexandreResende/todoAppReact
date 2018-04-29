@@ -30,7 +30,7 @@ export default class TodoList extends Component {
         <thead>
           <tr>
             <th>Descrição</th>
-            <th>Açoes</th>
+            <th className='tableActions'>Açoes</th>
           </tr>
         </thead>
         <tbody>
