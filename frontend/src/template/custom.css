@@ -1,0 +1,10 @@
+
+.btn {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.markedAsDone {
+  text-decoration: line-through;
+  color: #777;
+}

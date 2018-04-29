@@ -10,7 +10,7 @@ export default class IconButton extends Component {
         <button className={'btn btn-' + this.props.style} onClick={this.props.onClick}>
           <i className={'fa fa-' + this.props.icon}></i>
         </button>
-    </If>
+      </If>
     );
   }
 }

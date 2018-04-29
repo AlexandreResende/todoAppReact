@@ -13,10 +13,6 @@ export default class If extends Component {
   render() {
     const conditionalResult = this.conditional();
 
-    return (
-      <div>
-        {conditionalResult}
-      </div>
-    );
+    return conditionalResult;
   }
 }

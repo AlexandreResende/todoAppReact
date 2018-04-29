@@ -12,7 +12,7 @@ export default class TodoForm extends Component {
   render() {
     return (
       <div role='form' className='todoForm'>
-        <Grid cols='12 9 10'>
+        <Grid cols='12 9 9'>
           <input 
             id='description'
             className='form-control'
@@ -20,9 +20,8 @@ export default class TodoForm extends Component {
             value={this.props.description}
             onChange={this.props.handleChange}/>
         </Grid>
-        <Grid cols='12 3 2'>
-          <IconButton style='primary' icon='plus' onClick={this.props.handleAdd}>
-          </IconButton>
+        <Grid cols='12 3 3'>
+          <IconButton style='primary' icon='plus' onClick={this.props.handleAdd}></IconButton>
         </Grid>
       </div>
     );
