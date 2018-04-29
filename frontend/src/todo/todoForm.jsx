@@ -1,8 +1,24 @@
 
-import React from 'react'
+import React, { Component } from 'react'
 
-export default (props) => (
-  <div>
-    <h2>Form</h2>
-  </div>
-);
+import Grid from '../template/grid'
+import IconButton from '../template/iconButton'
+
+export default class TodoForm extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <div role='form' className='todoForm'>
+        <Grid cols='12 9 10'>
+          <input id='description' className='form-control' placeholder='Adicione uma tarefa' />
+        </Grid>
+        <Grid cols='12 3 2'>
+          <IconButton style='primary' icon='plus'></IconButton>
+        </Grid>
+      </div>
+    );
+  }
+}
